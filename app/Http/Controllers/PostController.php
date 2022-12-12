@@ -7,8 +7,8 @@ use App\Model\Post;
 
 class PostController extends Controller
 {
-public function index(Post $post)
+public function create(Category $category)
     {
-        return $post->get();
+        return view('posts/create')->with(['categories'=>$category->get()]);
     }
 }
